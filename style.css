@@ -1,0 +1,222 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+:root{
+    --ff: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;;
+    
+    --fw-m: 600;
+    --fw-b: 800;
+
+    --fs-2: 2.6rem;
+    --fs-3: 1.5rem;
+    --fs-p: 1rem;
+
+    --spacer: 0.6rem;
+    --spacer-m: 1rem;
+    --spacer-l: 3rem;
+
+    --br: 3rem;
+    --br-s: 0.3rem;
+
+    --primary-clr: #882d66;
+    --secondary-clr: rgb(33, 79, 149);
+    --secondary-clr-light: rgba(244, 215, 246, 0.951);
+}
+
+
+body {
+    background: linear-gradient(to bottom, #8a0559, #620962) ;
+    background-size: contain;
+    background-repeat: no-repeat;
+    height: 100vh;
+    overflow-x: hidden;
+}
+
+
+.container{
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    font-family: var(--ff);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 2rem;
+    background-color: var(--secondary-clr-light);
+    padding: var(--spacer-l);
+    box-shadow: rgba(255, 255, 255, 0.651) 0px 5px 15px;
+    border-radius: var(--br);
+}
+
+
+.container h1{
+    margin-bottom: 2rem;
+    font-size: var(--fs-2);
+    color: var(--primary-clr);
+}
+
+
+img{
+    translate: -20px -20px;
+}
+
+
+form{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    text-align:center;
+}
+
+
+.item{
+    padding: var(--spacer);
+    font-size: var(--fs-3);
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+}
+
+
+.item input{
+    padding: var(--spacer);
+    margin: 3px;
+    font-size: var(--fs-p);
+    width: 18rem;
+    display: inline-block;
+    outline: 0;
+    border: 1px solid rgb(195, 189, 189);
+    border-radius: var(--br-s);
+}
+
+
+.item-p{
+    margin: var(--spacer-m);
+    font-size: 0.9rem;
+}
+
+.item-p::after{
+    content: 'Terms and Conditions';
+    color: var(--secondary-clr);
+    font-weight: var(--fw-b);
+    cursor: pointer;
+}
+
+
+
+.item-p input[type="checkbox"]{
+    margin-right: 7px;
+}
+
+
+.item i{
+    font-weight: var(--fw-m);
+    color: var(--primary-clr);
+}
+
+
+button{
+    padding: var(--spacer);
+    width: 17.5rem;
+    font-size: var(--fs-p);
+    outline: 0;
+    border:0;
+    background-color: var(--primary-clr);
+    color: var(--secondary-clr-light);
+    border-radius: var(--br-s);
+    cursor: pointer;
+    margin: var(--spacer);
+    translate: 15px;
+    font-weight: var(--fw-m);
+    letter-spacing: 0.1rem;
+}
+
+
+button:hover{
+    opacity: 0.9;
+}
+
+
+p{
+    padding: var(--spacer-m);
+    font-size: 0.9rem;
+}
+
+
+p::after{
+    content: 'Login';
+    color: var(--secondary-clr);
+    font-weight: var(--fw-b);
+    cursor: pointer;
+}
+
+input.active{
+    border: 2px solid var(--primary-clr);
+}
+
+/*Media Queries */
+
+
+@media(max-width:960px){
+
+    body{
+        background: var(--secondary-clr-light);
+    }
+
+    .container{
+        flex-direction: column;
+        border-radius: 0;
+        height: 100vh;
+        padding: 0;
+        box-shadow: none;
+    }
+
+    .container h1{
+        font-size: 2.1rem;
+    }
+
+    .item{
+        font-size: 1.2rem;
+    }
+
+    .item input{
+        margin: 0;
+        font-size: 0.85rem;
+    }
+
+    .content{
+        font-size: 0.9rem;
+    }
+
+    img{
+        width: 75%;
+        translate: 0 30px;
+    }
+}
+
+@media(max-width: 540px){
+    .container h1{
+        font-size: 1.8rem;
+        translate: 0 16px;
+    }
+
+    img{
+        width: 95%;
+        translate: 0 31px;
+    }
+
+    .item input{
+        margin: 0;
+        font-size: 0.8rem;
+    }
+
+    .content{
+        font-size: 0.75rem;
+    }
+}
+
