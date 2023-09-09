@@ -1,14 +1,6 @@
 'use strict';
 
 const inputs = document.querySelectorAll('.input');
-const submitButton = document.querySelector('.submit');
-const name = document.querySelector('.name');
-const email = document.querySelector('.email');
-const password = document.querySelector('.password');
-const confirmPassword = document.querySelector('.confirmPassword');
-
-
-
 
 
 document.addEventListener('click', function (event) {
@@ -19,6 +11,4 @@ document.addEventListener('click', function (event) {
         event.target.classList.add('active');
     }
 });
-
-
 

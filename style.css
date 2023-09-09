@@ -159,6 +159,15 @@ input.active{
     border: 2px solid var(--primary-clr);
 }
 
+input.error{
+    border: 2px solid red;
+    transition: border-color 0.3s ease
+}
+
+.error:focus {
+    border: 2px solid var(--primary-clr);
+}
+
 /*Media Queries */
 
 
